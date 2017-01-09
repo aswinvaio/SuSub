@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuSub"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="SuSub" Height="600" Width="900" WindowStyle="None" WindowStartupLocation="CenterOwner" AllowsTransparency="True" Opacity=".95" BorderBrush="Black" BorderThickness="1" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Images/media_scripts.ico">
     <Grid>
-        
+        <Label Content="SuSub" HorizontalAlignment="Left" Margin="6,1,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+        <Button Name="btnClose" BorderBrush="White" HorizontalAlignment="Left" Width="31" Margin="867,0,0,0" RenderTransformOrigin="1.942,1.692" Click="btnClose_Click" Height="28" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="images/close.png" TileMode="Tile"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBox" Margin="41,112,528,353" TextWrapping="Wrap" MaxLines="3" />
+        <Label x:Name="label" Content="User Input" HorizontalAlignment="Left" Margin="41,86,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_Copy" Margin="41,299,528,166" TextWrapping="Wrap"/>
+        <Label x:Name="label_Copy" Content="preview" HorizontalAlignment="Left" Margin="41,273,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton" Content="Superscript" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton_Copy" Content="Normal" HorizontalAlignment="Left" Margin="385,144,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton_Copy1" Content="Subscript" HorizontalAlignment="Left" Margin="385,164,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="400" Margin="522,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333"/>
+        <Label x:Name="label_Copy1" Content="Output" HorizontalAlignment="Left" Margin="522,86,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
