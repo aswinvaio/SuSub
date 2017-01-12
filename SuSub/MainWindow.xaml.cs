@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace SuSub
 {
     /// <summary>
-    /// by sourath
+    /// by sourath.
     /// </summary>
     public partial class MainWindow : Window
     {
