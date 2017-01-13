@@ -21,7 +21,7 @@ namespace SuSub
     public partial class MainWindow : Window
     {
 
-
+        int[] prefix = new int[int.MaxValue];
         public MainWindow()
         {
             InitializeComponent();
@@ -81,7 +81,6 @@ namespace SuSub
                     break;
                 case Key.Left:
                     rbNorm.IsChecked = true;
-                    e.Handled = true;
                     break;
                 case Key.Right:
                     rbNorm.IsChecked = true;
@@ -92,28 +91,17 @@ namespace SuSub
         private void txtUserIn_keyUp(object sender, KeyEventArgs e)
         {
             txtUserIn_txtChnged();
-            //txtUserIn.po
         }
 
         private void txtUserIn_KeyDown(object sender, KeyEventArgs e)
         {
-            //switch (e.Key)
-            //{
-            //    case Key.Enter:
-            //    case Key.Up:
-            //    case Key.Down:
-            //    case Key.Left:
-            //    case Key.Right:
-            //        e.Handled = true;
-            //        break;
-            //}
+          
         }
 
         private void txtUserIn_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
-                
                 case Key.Up:
                     rbSup.IsChecked = true;
                     e.Handled = true;
@@ -131,7 +119,6 @@ namespace SuSub
                     e.Handled = true;
                     break;
             }
-
         }
     }
 }
