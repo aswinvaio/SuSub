@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,14 +56,16 @@ namespace SuSub
             {
                 switch (prefix[i])
                 {
-                    case 1: toPreview += "^v";
+                    case 1: toPreview += "^^";
                         break;
-                    case 2: toPreview+="^^";
+                    case 2: toPreview += "^v";
                         break;
                 }
                 toPreview += userIn[i];
             }
+
             txtUserPreview.Text = toPreview;
+
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -99,16 +102,17 @@ namespace SuSub
 
         private void txtUserIn_keyUp(object sender, KeyEventArgs e)
         {
-            txtUserIn_txtChnged();
+            txtUserIn_txtChnged(); 
         }
 
         private void txtUserIn_KeyDown(object sender, KeyEventArgs e)
         {
-          
+            
         }
 
         private void txtUserIn_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            int lenght = txtUserIn.Text.Length;
             switch (e.Key)
             {
                 case Key.Up:
@@ -128,9 +132,9 @@ namespace SuSub
                     e.Handled = true;
                     break;
                 case Key.Back :
-                    prefix[txtUserIn.Text.Length] = 0;
+                    prefix[lenght] = 0;
                     break;
-                default: prefix[txtUserIn.Text.Length] = getCharMode();
+                default: prefix[lenght] = getCharMode();
                     break;
             }
         }
