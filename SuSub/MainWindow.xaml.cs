@@ -21,7 +21,12 @@ namespace SuSub
     public partial class MainWindow : Window
     {
 
-        int[] prefix = new int[int.MaxValue];
+        int[] prefix = new int[5000];
+        // 0 Normal 
+        // 1 Superscript 
+        // 2 Subscript
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -45,20 +50,24 @@ namespace SuSub
         private void txtUserIn_txtChnged()
         {
             string userIn = txtUserIn.Text;
-            if (rbSub.IsChecked == true)
+            string toPreview = "";
+            for (int i = 0; i < userIn.Length; i++)
             {
-                userIn = userIn.Insert(userIn.Length - 2, "0");
+                switch (prefix[i])
+                {
+                    case 1: toPreview += "^v";
+                        break;
+                    case 2: toPreview+="^^";
+                        break;
+                }
+                toPreview += userIn[i];
             }
-            else if (rbSup.IsChecked == true)
-            {
-            }
-            txtUserIn.Text = userIn;
-            txtUserPreview.Text = userIn;
+            txtUserPreview.Text = toPreview;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            txtOutput.Text += txtUserIn.Text;
+            txtOutput.Text += txtUserPreview.Text;
             txtOutput.Text += "\n";
             txtUserIn.Text = "";
             txtUserPreview.Text = "";
@@ -118,7 +127,19 @@ namespace SuSub
                     rbNorm.IsChecked = true;
                     e.Handled = true;
                     break;
+                case Key.Back :
+                    prefix[txtUserIn.Text.Length] = 0;
+                    break;
+                default: prefix[txtUserIn.Text.Length] = getCharMode();
+                    break;
             }
+        }
+        public int getCharMode()
+        {
+            if (rbNorm.IsChecked==true) return 0;
+            if (rbSup.IsChecked==true) return 1;
+            if (rbSub.IsChecked == true) return 2;
+            return -1;
         }
     }
 }
