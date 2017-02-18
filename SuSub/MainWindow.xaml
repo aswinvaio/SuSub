@@ -11,7 +11,7 @@
 
         <Button Name="btnClose" BorderBrush="White" HorizontalAlignment="Right" Width="31" RenderTransformOrigin="1.942,1.692" Click="btnClose_Click" Height="28" VerticalAlignment="Top">
             <Button.Background>
-                <ImageBrush ImageSource="images/close.png" TileMode="Tile"/>
+                <ImageBrush ImageSource="Images/close.png" TileMode="Tile"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtUserIn" Margin="41,112,0,0" FontSize="18" TextWrapping="Wrap" KeyUp="txtUserIn_keyUp" KeyDown="txtUserIn_KeyDown" PreviewKeyDown="txtUserIn_PreviewKeyDown" HorizontalAlignment="Left" Width="329" Height="133" VerticalAlignment="Top" />
