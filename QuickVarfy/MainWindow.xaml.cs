@@ -77,14 +77,14 @@ namespace QuickVarfy
             if (txtFile.Text != "" && txtDir.Text != "")
                 searchDirectory(txtFile.Text, txtDir.Text);
 
-            //Thread.Sleep(2000);
+            
             this.Cursor = Cursors.Arrow;
         }
 
         private bool searchDirectory(string fileName, string DirName)
         {
-            //try
-            //{
+            try
+            {
                 using (ExcelPackage xlPackage = new ExcelPackage(new FileInfo(fileName)))
                 {
                     ExcelWorksheet myWorksheet = xlPackage.Workbook.Worksheets.First(); //select sheet here
@@ -116,12 +116,13 @@ namespace QuickVarfy
                     listMIssedFiles[0] += found;
                     lbResult.ItemsSource = listMIssedFiles;
                 }
-            //}
-            //catch (Exception err)
-            //{
-            //    MessageBox.Show(err.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return false;
-            //}
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            Thread.Sleep(2000);
             return true;
         }
 
