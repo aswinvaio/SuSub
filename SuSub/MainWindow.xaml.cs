@@ -145,5 +145,20 @@ namespace SuSub
             if (rbSub.IsChecked == true) return 2;
             return -1;
         }
+
+        private void btnClearInput_Click(object sender, RoutedEventArgs e)
+        {
+            txtUserIn.Text = "";
+        }
+
+        private void btnClearOutput_Click(object sender, RoutedEventArgs e)
+        {
+            txtOutput.Text = "";
+        }
+
+        private void btnCopyOutput_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(txtOutput.Text);
+        }
     }
 }

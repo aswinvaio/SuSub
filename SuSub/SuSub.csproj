@@ -108,6 +108,11 @@
   <ItemGroup>
     <Resource Include="media_scripts.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clipboard.png" />
+    <Resource Include="Images\delete-button.png" />
+    <Resource Include="Images\text-documents.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
