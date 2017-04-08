@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SuSub</RootNamespace>
-    <AssemblyName>SuSub</AssemblyName>
+    <AssemblyName>SupSub!</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>media_scripts.ico</ApplicationIcon>
+    <ApplicationIcon>script.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -112,6 +112,12 @@
     <Resource Include="Images\clipboard.png" />
     <Resource Include="Images\delete-button.png" />
     <Resource Include="Images\text-documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\script.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="script.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -70,11 +70,14 @@ namespace SuSub
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            txtOutput.Text += txtUserPreview.Text;
-            txtOutput.Text += "\n";
-            txtUserIn.Text = "";
-            txtUserPreview.Text = "";
-            rbNorm.IsChecked = true;
+            if (!string.IsNullOrEmpty(txtUserIn.Text))
+            {
+                txtOutput.Text += txtUserPreview.Text;
+                txtOutput.Text += "\n";
+                txtUserIn.Text = "";
+                txtUserPreview.Text = "";
+                rbNorm.IsChecked = true;
+            }
         }
 
         private void Window_keyUp(object sender, KeyEventArgs e)

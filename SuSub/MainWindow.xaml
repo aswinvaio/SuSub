@@ -5,30 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuSub"
         mc:Ignorable="d"
-        Title="SuSub" Height="555.263" Width="900" WindowStyle="None" WindowStartupLocation="CenterOwner" AllowsTransparency="True" Opacity=".95" BorderBrush="Black" BorderThickness="1" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Images/media_scripts.ico" KeyUp="Window_keyUp" >
+        Title="SupSub!" Height="555.263" Width="900" WindowStyle="None" WindowStartupLocation="CenterOwner" AllowsTransparency="True" Opacity=".95" BorderBrush="Black" BorderThickness="1" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" Icon="Images/script.ico" KeyUp="Window_keyUp" >
     <Grid>
         <Label Content="SupSub!" HorizontalAlignment="Left" Margin="6,1,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
 
-        <Button Name="btnClose" BorderBrush="White" HorizontalAlignment="Right" Width="28" RenderTransformOrigin="1.942,1.692" Click="btnClose_Click" Height="28" VerticalAlignment="Top">
+        <Button Name="btnClose" ToolTip="Close" BorderBrush="White" HorizontalAlignment="Right" Width="28" RenderTransformOrigin="1.942,1.692" Click="btnClose_Click" Height="28" VerticalAlignment="Top">
             <Button.Background>
                 <ImageBrush ImageSource="Images/close.png" TileMode="Tile"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtUserIn" Margin="41,112,0,0" FontSize="18" TextWrapping="Wrap" KeyUp="txtUserIn_keyUp" KeyDown="txtUserIn_KeyDown" PreviewKeyDown="txtUserIn_PreviewKeyDown" HorizontalAlignment="Left" Width="329" Height="133" VerticalAlignment="Top" />
-        <Label x:Name="label" Content="User Input" HorizontalAlignment="Left" Margin="41,86,0,444"/>
+        <Label x:Name="label" Content="User Input" HorizontalAlignment="Left" Margin="41,86,0,444" Width="89"/>
         <Button Name="btnClearInput" ToolTip="Clear Input" BorderBrush="White" HorizontalAlignment="Left" Width="23" RenderTransformOrigin="1.942,1.692" Click="btnClearInput_Click" Height="23" VerticalAlignment="Top" Margin="347,86,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="Images/delete-button.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="txtUserPreview" Margin="41,299,0,0" FontSize="18" FontWeight="Bold" Background="#b1b1b1" TextWrapping="Wrap" HorizontalAlignment="Left" Width="329" Height="133" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy" Content="preview" HorizontalAlignment="Left" Margin="41,273,0,257"/>
+        <Label x:Name="label_Copy" Content="preview" HorizontalAlignment="Left" Margin="41,273,0,257" Width="81"/>
         <RadioButton x:Name="rbSup" Content="Superscript" Margin="385,124,0,0" HorizontalAlignment="Left" Width="92" Height="13" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbNorm" Content="Normal" Margin="385,144,0,0" HorizontalAlignment="Left" Width="92" Height="13" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbSub" Content="Subscript" Margin="385,164,0,0" HorizontalAlignment="Left" Width="92" Height="13" VerticalAlignment="Top"/>
         <TextBox x:Name="txtOutput" Margin="522,112,43,41" TextWrapping="Wrap" AcceptsReturn="True"/>
-        <Label x:Name="label_Copy1" Content="Output" Margin="522,86,333,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAdd" Content="Add" Margin="389,412,0,0" Click="btnAdd_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+        <Label x:Name="label_Copy1" Content="Output" Margin="522,86,271,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdd" ToolTip="Add to Output" Content="Add" Margin="389,412,0,0" Click="btnAdd_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
         <Button x:Name="btnClearOutput" ToolTip="Clear Output" BorderBrush="White" RenderTransformOrigin="1.942,1.692" Click="btnClearOutput_Click" Height="23" VerticalAlignment="Top" Margin="0,86,43,0" HorizontalAlignment="Right" Width="23">
             <Button.Background>
                 <ImageBrush ImageSource="Images/delete-button.png" Stretch="Uniform"/>
